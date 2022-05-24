@@ -1,11 +1,10 @@
 name: Issue created demo
 on:
-issue:
-  types:
-    - opened
+  issues:
+    types:
+      - opened
 jobs:
   Describe-Issue:
     runs-on: ubuntu-latest
     steps:
       - run: echo "New issue has been created on event ${{ github.event_name }}."
-      - run: echo "Issue title: ${{ issue.title }}"
